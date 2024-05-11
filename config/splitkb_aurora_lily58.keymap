@@ -25,14 +25,14 @@
             tapping-term-ms = <200>;
             bindings = <&kp LSHFT>, <&caps_word>;
         };
-        ht0: behavior_ret_shift {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <100>;
-            quick-tap-ms = <200>;
-            bindings = <&kp RET>,<&kp LSHFT>;
-        };
+        //ht0: behavior_ret_shift {
+        //    compatible = "zmk,behavior-hold-tap";
+        //    #binding-cells = <2>;
+        //    flavor = "tap-preferred";
+        //    tapping-term-ms = <100>;
+        //    quick-tap-ms = <200>;
+        //    bindings = <&kp RET>,<&kp LSHFT>;
+        //};
     };
 
     keymap {
@@ -50,7 +50,7 @@
 &kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y     &kp U    &kp I     &kp O   &kp P    &kp MINUS
 &td0      &kp A  &kp S  &kp D    &kp F    &kp G                      &kp H     &kp J    &kp K     &kp L   &kp SEMI &kp SQT
 &kp LCTRL &kp Z  &kp X  &kp C    &kp V    &kp B  &kp LBKT   &kp RBKT &kp N     &kp M    &kp COMMA &kp DOT &kp FSLH &kp BSLH
-                        &kp LALT &kp DEL  &mo 2  &kp SPACE  &ht0 RET &mo 1     &kp BSPC &kp LGUI
+                        &kp LALT &kp DEL  &mo 2  &kp SPACE  &kp RET &mo 1     &kp BSPC &kp LGUI
             >;
         };
 
