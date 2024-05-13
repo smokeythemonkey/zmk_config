@@ -32,7 +32,13 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LSHFT>, <&caps_word>;
-        };        
+        };
+        td1: tap_dance_grave_escape {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells= <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp GRAVE>, <&ESC>;
+        }      
     };    
 
     keymap {
@@ -46,11 +52,11 @@
 // | CTRL  |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   |   \   |
 //                     | ALT  | DEL  | RAISE|  SPACE |  | ENTER | LOWER| BSPC  | GUI   |
             bindings = <
-&kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                                   &kp N6    &kp N7   &kp N8    &kp N9  &kp N0   &kp EQUAL
+&td1      &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                                   &kp N6    &kp N7   &kp N8    &kp N9  &kp N0   &kp EQUAL
 &kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                                    &kp Y     &kp U    &kp I     &kp O   &kp P    &kp MINUS
 &td0      &kp A  &kp S  &kp D    &kp F    &kp G                                    &kp H     &kp J    &kp K     &kp L   &kp SEMI &kp SQT
 &kp LCTRL &kp Z  &kp X  &kp C    &kp V    &kp B  &mt LPAR LBKT   &mt RPAR RBKT     &kp N     &kp M    &kp COMMA &kp DOT &kp FSLH &kp BSLH
-                        &kp LALT &kp DEL  &mo 2  &kp SPACE       &mt LSHIFT RET    &mo 1     &kp BSPC &kp LGUI
+                        &kp LALT &kp DEL  &mo 2  &mt SPACE LGUI  &mt LSHIFT RET    &mo 1     &kp BSPC &kp LGUI
             >;
         };
 
